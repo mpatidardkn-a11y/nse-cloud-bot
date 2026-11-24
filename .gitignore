@@ -1,0 +1,5 @@
+reports/
+email.env
+whatsapp.env
+__pycache__/
+*.pyc
