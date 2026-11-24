@@ -1,10 +1,10 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-24T20:32:57Z",
+  "created_at": "2026-11-24T21:08:41Z",
   "mode": "daily",
   "as_of": "2026-11-23 close",
   "universe": 2407,
-  "scanned": 459,
+  "scanned": 458,
   "failed": 0,
   "source": "yahoo",
   "filters": {
@@ -936,16 +936,6 @@
       "close_date": "2026-11-23",
       "rsi": 63.5,
       "volume": 820931
-    },
-    {
-      "symbol": "SHUKRAMED",
-      "setups": [
-        "breakout_20d"
-      ],
-      "price": 87.91,
-      "close_date": "2026-11-23",
-      "rsi": 85.5,
-      "volume": 9257801
     },
     {
       "symbol": "ICICILIFE",
