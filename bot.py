@@ -458,12 +458,81 @@ def send_email(subject, html, files):
             log("email error:", e); time.sleep(5)
 
 
+# ======================================================================= ALL-DAY LOOP (exact timing)
+SLOTS = [datetime.time(h, m) for h in range(9, 16) for m in (5, 20, 35, 50)
+         if datetime.time(9, 35) <= datetime.time(h, m) <= datetime.time(15, 20)]
+
+
+def sleep_until(t):
+    while True:
+        left = (datetime.datetime.combine(now_ist().date(), t) - now_ist()).total_seconds()
+        if left <= 0:
+            return
+        time.sleep(min(left, 60))
+
+
+def git_save():
+    cmds = [["git", "config", "user.name", "nse-bot"], ["git", "config", "user.email", "actions@users.noreply.github.com"],
+            ["git", "add", "trader/daily.json", "trader/plan.json"]]
+    for c in cmds:
+        subprocess.run(c, capture_output=True)
+    if subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode == 0:
+        return
+    subprocess.run(["git", "commit", "-qm", "Setups for %s" % now_ist().date()], capture_output=True)
+    for _ in range(3):
+        subprocess.run(["git", "pull", "-q", "--rebase", "origin", "main"], capture_output=True)
+        if subprocess.run(["git", "push", "-q", "origin", "HEAD:main"], capture_output=True).returncode == 0:
+            log("setup list saved to repo"); return
+        time.sleep(5)
+    log("could not push setup list")
+
+
+def cmd_day(args):
+    """Started early by GitHub; waits for each time itself so emails go out on the dot."""
+    frm = scan.parse_hhmm(args.get("from") or "00:00", "--from")
+    until = scan.parse_hhmm(args.get("until") or "23:59", "--until")
+    d = now_ist().date()
+    ok, why = scan.trading_day(d)
+    if not ok:
+        log("day: market closed today (%s)" % why); return
+    if args.get("morning_first"):
+        if now_ist().time() < datetime.time(7, 58):
+            log("day: waiting for 07:58 IST"); sleep_until(datetime.time(7, 58))
+        if now_ist().time() <= datetime.time(9, 20):
+            try:
+                cmd_morning({"now": None, "no_send": False, "force": False})
+            except Exception as e:
+                log("morning failed:", e)
+        else:
+            log("day: started after 9:20 - morning email skipped")
+            try:
+                cmd_morning({"now": None, "no_send": True, "force": False})
+            except Exception as e:
+                log("morning failed:", e)
+        git_save()
+    for slot in SLOTS:
+        if not (frm <= slot < until):
+            continue
+        late = (now_ist() - datetime.datetime.combine(d, slot)).total_seconds() / 60
+        if late > 10:
+            continue  # this slot is already gone
+        sleep_until(slot)
+        log("slot", slot.strftime("%H:%M"))
+        try:
+            cmd_run({"now": None, "no_send": False, "force": False, "slot": True})
+        except Exception as e:
+            log("run failed:", e)
+    log("day: done until", until.strftime("%H:%M"))
+
+
 def main():
     a = sys.argv[1:]
-    if not a or a[0] not in ("morning", "run"):
+    if not a or a[0] not in ("morning", "run", "day"):
         print(__doc__); return
-    args = {"now": a[a.index("--now") + 1] if "--now" in a else None, "no_send": "--no-send" in a, "force": "--force" in a}
-    (cmd_morning if a[0] == "morning" else cmd_run)(args)
+    opt = lambda k: a[a.index(k) + 1] if k in a else None
+    args = {"now": opt("--now"), "no_send": "--no-send" in a, "force": "--force" in a,
+            "from": opt("--from"), "until": opt("--until"), "morning_first": "--morning-first" in a}
+    {"morning": cmd_morning, "run": cmd_run, "day": cmd_day}[a[0]](args)
 
 
 if __name__ == "__main__":

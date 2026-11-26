@@ -1,0 +1,64 @@
+name: Daily reports (8:00 + every 15 min, on time)
+# GitHub can start scheduled runs late, so this starts early (06:30 IST) and the bot itself
+# waits for 07:58 (morning analysis) and then for 9:35, 9:50 ... 15:20 to email on the dot.
+on:
+  schedule:
+    - cron: "0 1 * * 1-5"     # 06:30 IST Mon-Fri (UTC cron)
+    - cron: "45 1 * * 1-5"    # 07:15 IST backup, in case GitHub drops the first one
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: nse-day
+  cancel-in-progress: false
+jobs:
+  morning_and_first_half:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    env:
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+      EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+      EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+      EMAIL_TO: ${{ secrets.EMAIL_TO }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Skip if today's reports already ran (backup trigger)
+        id: once
+        run: |
+          if git log -1 --format=%s | grep -q "Setups for $(TZ=Asia/Kolkata date +%F)"; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"; echo "Already ran today."
+          fi
+      - name: 8:00 analysis, then top 10 at 9:35 ... 11:50
+        if: steps.once.outputs.skip != 'true'
+        run: python bot.py day --morning-first --until 12:00
+    outputs:
+      skip: ${{ steps.once.outputs.skip }}
+
+  second_half:
+    needs: morning_and_first_half
+    if: needs.morning_and_first_half.outputs.skip != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+      EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+      EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+      EMAIL_TO: ${{ secrets.EMAIL_TO }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Top 10 at 12:05 ... 15:20
+        run: python bot.py day --from 12:00 --until 15:30

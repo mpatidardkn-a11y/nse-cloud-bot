@@ -1,7 +1,5 @@
-name: Morning analysis (8:00 IST)
+name: Manual test - morning analysis
 on:
-  schedule:
-    - cron: "25 2 * * 1-5"      # 07:55 IST Mon-Fri (GitHub cron is UTC); report reaches you around 8:00
   workflow_dispatch:
     inputs:
       force:

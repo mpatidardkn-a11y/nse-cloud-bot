@@ -1,7 +1,5 @@
-name: Top 10 every 15 min (market hours)
+name: Manual test - top 10
 on:
-  schedule:
-    - cron: "5,20,35,50 4-9 * * 1-5"   # 09:35, 09:50 ... 15:20 IST Mon-Fri (UTC cron)
   workflow_dispatch:             # also started on the dot by an external timer (cron-job.org)
     inputs:
       force:
