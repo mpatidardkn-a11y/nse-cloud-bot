@@ -2,7 +2,12 @@ name: Top 10 every 15 min (market hours)
 on:
   schedule:
     - cron: "5,20,35,50 4-9 * * 1-5"   # 09:35, 09:50 ... 15:20 IST Mon-Fri (UTC cron)
-  workflow_dispatch: {}
+  workflow_dispatch:             # also started on the dot by an external timer (cron-job.org)
+    inputs:
+      force:
+        description: "Ignore the market-hours / holiday check (manual test)"
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -12,6 +17,8 @@ jobs:
   top10:
     runs-on: ubuntu-latest
     timeout-minutes: 12
+    env:
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -24,4 +31,4 @@ jobs:
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
-        run: python bot.py run ${{ github.event_name == 'workflow_dispatch' && '--force' || '' }}
+        run: python bot.py run ${{ inputs.force && '--force' || '' }}

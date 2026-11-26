@@ -130,6 +130,9 @@ def cmd_morning(args):
     ok, why = scan.trading_day(d)
     if not ok and not args.get("force"):
         log("morning: market closed today (%s)" % why); return
+    if os.environ.get("GITHUB_EVENT_NAME") == "schedule" and now.time() > datetime.time(9, 20) and not args.get("now"):
+        log("morning: scheduled run started after 9:20 IST - building today's setup list, email skipped")
+        args["no_send"] = True
     r = subprocess.run([PY, "scan.py", "daily", "--out", "trader/daily.json", "--quiet"], capture_output=True, text=True)
     log("daily scan exit", r.returncode, (r.stdout + r.stderr).strip()[-300:])
     daily = json.load(open("trader/daily.json"))
@@ -334,6 +337,10 @@ def cmd_run(args):
         log("run: market closed (%s)" % why); return
     if not args.get("force") and not (datetime.time(9, 30) <= now.time() <= datetime.time(15, 25)):
         log("run: outside 9:30-15:25 IST, skip"); return
+    if os.environ.get("GITHUB_EVENT_NAME") == "schedule" and not args.get("now"):
+        late = (now.minute - 5) % 15   # GitHub cron slots are :05 :20 :35 :50
+        if late > 10:
+            log("run: GitHub started this scheduled run %d min late - skipped to avoid a stale report" % late); return
     daily = json.load(open("trader/daily.json"))
     dsetups = {h["symbol"]: h for h in daily["hits"]}
     plan = json.load(open("trader/plan.json")) if os.path.exists("trader/plan.json") else {"setups": []}

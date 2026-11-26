@@ -2,7 +2,12 @@ name: Morning analysis (8:00 IST)
 on:
   schedule:
     - cron: "25 2 * * 1-5"      # 07:55 IST Mon-Fri (GitHub cron is UTC); report reaches you around 8:00
-  workflow_dispatch: {}          # "Run workflow" button for a manual test
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Run even on a holiday (manual test)"
+        type: boolean
+        default: false          # "Run workflow" button for a manual test
 permissions:
   contents: write
 concurrency:
@@ -24,7 +29,7 @@ jobs:
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
-        run: python bot.py morning ${{ github.event_name == 'workflow_dispatch' && '--force' || '' }}
+        run: python bot.py morning ${{ inputs.force && '--force' || '' }}
       - name: Save today's setup list for the 15-minute runs
         run: |
           git config user.name "nse-bot"
