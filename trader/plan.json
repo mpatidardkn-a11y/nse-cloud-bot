@@ -1,5 +1,5 @@
 {
- "date": "2026-11-26",
+ "date": "2026-11-27",
  "setups": [
   {
    "sym": "INDIGO",
@@ -26,18 +26,6 @@
    "close": 194.1999969482422
   },
   {
-   "sym": "COHANCE",
-   "setup": "20D Breakout",
-   "score": 4,
-   "entry": 520.55,
-   "stop": 511.0,
-   "t1": 530.1,
-   "t2": 539.65,
-   "risk": 9.549999999999955,
-   "note": "Volume 20.7x avg",
-   "close": 489.54998779296875
-  },
-  {
    "sym": "HEROMOTOCO",
    "setup": "20D Breakout",
    "score": 4,
@@ -48,18 +36,6 @@
    "risk": 70.5,
    "note": "Volume 1.7x avg",
    "close": 5751.5
-  },
-  {
-   "sym": "BAJAJFINSV",
-   "setup": "20D Breakout, Bull Flag",
-   "score": 4,
-   "entry": 1992.0,
-   "stop": 1964.0,
-   "t1": 2020.0,
-   "t2": 2048.0,
-   "risk": 28.0,
-   "note": "Volume 4.6x avg",
-   "close": 1925.0
   },
   {
    "sym": "HINDUNILVR",
@@ -74,6 +50,18 @@
    "close": 2141.800048828125
   },
   {
+   "sym": "JWL",
+   "setup": "20D Breakout, Reclaim 20DMA",
+   "score": 4,
+   "entry": 222.69,
+   "stop": 217.68,
+   "t1": 227.7,
+   "t2": 232.71,
+   "risk": 5.009999999999991,
+   "note": "Volume 21.0x avg",
+   "close": 222.4600067138672
+  },
+  {
    "sym": "LGEINDIA",
    "setup": "20D Breakout",
    "score": 4,
@@ -86,16 +74,16 @@
    "close": 1818.4000244140625
   },
   {
-   "sym": "DABUR",
-   "setup": "20D Breakout",
+   "sym": "PRESTIGE",
+   "setup": "Bull Flag",
    "score": 4,
-   "entry": 434.05,
-   "stop": 428.45,
-   "t1": 439.65,
-   "t2": 445.25,
-   "risk": 5.600000000000023,
-   "note": "Volume 8.4x avg",
-   "close": 430.0
+   "entry": 1702.8,
+   "stop": 1674.7,
+   "t1": 1730.9,
+   "t2": 1759.0,
+   "risk": 28.09999999999991,
+   "note": "Volume 1.6x avg",
+   "close": 1685.0999755859375
   },
   {
    "sym": "CIPLA",
@@ -134,30 +122,6 @@
    "close": 1131.3499755859375
   },
   {
-   "sym": "LTF",
-   "setup": "20D Breakout, Bull Flag",
-   "score": 4,
-   "entry": 292.7,
-   "stop": 287.7,
-   "t1": 297.7,
-   "t2": 302.7,
-   "risk": 5.0,
-   "note": "Volume 3.7x avg",
-   "close": 283.95001220703125
-  },
-  {
-   "sym": "KARURVYSYA",
-   "setup": "Bull Flag",
-   "score": 4,
-   "entry": 387.15,
-   "stop": 380.35,
-   "t1": 393.95,
-   "t2": 400.75,
-   "risk": 6.7999999999999545,
-   "note": "Volume 2.0x avg",
-   "close": 378.75
-  },
-  {
    "sym": "MARICO",
    "setup": "20D Breakout, Bull Flag",
    "score": 4,
@@ -170,30 +134,6 @@
    "close": 935.2000122070312
   },
   {
-   "sym": "APOLLOHOSP",
-   "setup": "20D Breakout",
-   "score": 3,
-   "entry": 9419.5,
-   "stop": 9313.5,
-   "t1": 9525.5,
-   "t2": 9631.5,
-   "risk": 106.0,
-   "note": "",
-   "close": 9257.0
-  },
-  {
-   "sym": "EICHERMOT",
-   "setup": "20D Breakout",
-   "score": 3,
-   "entry": 8368.5,
-   "stop": 8253.5,
-   "t1": 8483.5,
-   "t2": 8598.5,
-   "risk": 115.0,
-   "note": "Volume 1.5x avg",
-   "close": 8336.0
-  },
-  {
    "sym": "BRITANNIA",
    "setup": "20D Breakout",
    "score": 3,
@@ -204,42 +144,6 @@
    "risk": 65.5,
    "note": "Volume 2.1x avg",
    "close": 5076.2001953125
-  },
-  {
-   "sym": "DMART",
-   "setup": "20D Breakout",
-   "score": 3,
-   "entry": 3595.6,
-   "stop": 3562.7,
-   "t1": 3628.5,
-   "t2": 3661.4,
-   "risk": 32.90000000000009,
-   "note": "Volume 2.6x avg",
-   "close": 3592.0
-  },
-  {
-   "sym": "KOPRAN",
-   "setup": "20D Breakout",
-   "score": 3,
-   "entry": 303.8,
-   "stop": 295.8,
-   "t1": 311.8,
-   "t2": 319.8,
-   "risk": 8.0,
-   "note": "Volume 26.6x avg",
-   "close": 289.5199890136719
-  },
-  {
-   "sym": "BRIGADE",
-   "setup": "20D Breakout",
-   "score": 3,
-   "entry": 621.65,
-   "stop": 611.0,
-   "t1": 632.3,
-   "t2": 642.95,
-   "risk": 10.649999999999977,
-   "note": "Volume 12.8x avg",
-   "close": 589.7000122070312
   },
   {
    "sym": "TRENT",
@@ -266,6 +170,30 @@
    "close": 1123.800048828125
   },
   {
+   "sym": "PHOENIXLTD",
+   "setup": "Bull Flag",
+   "score": 3,
+   "entry": 2314.8,
+   "stop": 2278.7,
+   "t1": 2350.9,
+   "t2": 2387.0,
+   "risk": 36.100000000000364,
+   "note": "",
+   "close": 2285.5
+  },
+  {
+   "sym": "TVSMOTOR",
+   "setup": "20D Breakout",
+   "score": 3,
+   "entry": 4640.1,
+   "stop": 4582.2,
+   "t1": 4698.0,
+   "t2": 4755.9,
+   "risk": 57.900000000000546,
+   "note": "",
+   "close": 4610.0
+  },
+  {
    "sym": "LAURUSLABS",
    "setup": "20D Breakout",
    "score": 3,
@@ -290,16 +218,28 @@
    "close": 3775.199951171875
   },
   {
-   "sym": "TATACONSUM",
-   "setup": "20D Breakout",
+   "sym": "HDFCAMC",
+   "setup": "Bull Flag",
    "score": 3,
-   "entry": 1187.0,
-   "stop": 1174.4,
-   "t1": 1199.6,
-   "t2": 1212.2,
-   "risk": 12.599999999999909,
-   "note": "Volume 1.8x avg",
-   "close": 1185.800048828125
+   "entry": 2731.6,
+   "stop": 2690.1,
+   "t1": 2773.1,
+   "t2": 2814.6,
+   "risk": 41.5,
+   "note": "",
+   "close": 2671.300048828125
+  },
+  {
+   "sym": "ASIANPAINT",
+   "setup": "Bull Flag",
+   "score": 3,
+   "entry": 2636.2,
+   "stop": 2602.2,
+   "t1": 2670.2,
+   "t2": 2704.2,
+   "risk": 34.0,
+   "note": "",
+   "close": 2621.199951171875
   },
   {
    "sym": "LODHA",
@@ -314,16 +254,16 @@
    "close": 1202.0
   },
   {
-   "sym": "SBILIFE",
-   "setup": "Bull Flag",
+   "sym": "TITAGARH",
+   "setup": "20D Breakout",
    "score": 3,
-   "entry": 1841.3,
-   "stop": 1818.9,
-   "t1": 1863.7,
-   "t2": 1886.1,
-   "risk": 22.399999999999864,
-   "note": "",
-   "close": 1804.9000244140625
+   "entry": 751.8,
+   "stop": 740.55,
+   "t1": 763.05,
+   "t2": 774.3,
+   "risk": 11.25,
+   "note": "Volume 1.9x avg; Below 50DMA",
+   "close": 745.0
   },
   {
    "sym": "HDFCBANK",
@@ -338,6 +278,30 @@
    "close": 846.2000122070312
   },
   {
+   "sym": "CDSL",
+   "setup": "Bull Flag",
+   "score": 3,
+   "entry": 1428.0,
+   "stop": 1407.8,
+   "t1": 1448.2,
+   "t2": 1468.4,
+   "risk": 20.200000000000045,
+   "note": "",
+   "close": 1413.0
+  },
+  {
+   "sym": "LENSKART",
+   "setup": "Bull Flag",
+   "score": 3,
+   "entry": 739.45,
+   "stop": 726.8,
+   "t1": 752.1,
+   "t2": 764.75,
+   "risk": 12.650000000000091,
+   "note": "",
+   "close": 720.5499877929688
+  },
+  {
    "sym": "ITC",
    "setup": "20D Breakout, Bull Flag",
    "score": 3,
@@ -348,6 +312,18 @@
    "risk": 3.75,
    "note": "RSI>80 overbought - avoid chasing; Volume 1.8x avg",
    "close": 309.25
+  },
+  {
+   "sym": "KFINTECH",
+   "setup": "Bull Flag",
+   "score": 3,
+   "entry": 942.55,
+   "stop": 927.15,
+   "t1": 957.95,
+   "t2": 973.35,
+   "risk": 15.399999999999977,
+   "note": "",
+   "close": 934.0
   },
   {
    "sym": "TMCV",
@@ -398,18 +374,6 @@
    "close": 222.85000610351562
   },
   {
-   "sym": "BANKBARODA",
-   "setup": "Bull Flag",
-   "score": 3,
-   "entry": 279.8,
-   "stop": 275.85,
-   "t1": 283.75,
-   "t2": 287.7,
-   "risk": 3.9499999999999886,
-   "note": "",
-   "close": 276.42999267578125
-  },
-  {
    "sym": "ANGELONE",
    "setup": "Bull Flag",
    "score": 3,
@@ -432,6 +396,18 @@
    "risk": 7.599999999999966,
    "note": "",
    "close": 366.3500061035156
+  },
+  {
+   "sym": "WELSPUNLIV",
+   "setup": "20D Breakout",
+   "score": 3,
+   "entry": 279.15,
+   "stop": 272.3,
+   "t1": 286.0,
+   "t2": 292.85,
+   "risk": 6.849999999999966,
+   "note": "",
+   "close": 276.57000732421875
   },
   {
    "sym": "GROWW",
@@ -482,16 +458,16 @@
    "close": 4936.0
   },
   {
-   "sym": "THOMASCOOK",
+   "sym": "TORNTPHARM",
    "setup": "20D Breakout",
    "score": 2,
-   "entry": 155.16,
-   "stop": 151.4,
-   "t1": 158.92,
-   "t2": 162.68,
-   "risk": 3.759999999999991,
-   "note": "RSI>80 overbought - avoid chasing; Volume 38.6x avg",
-   "close": 149.60000610351562
+   "entry": 4900.4,
+   "stop": 4852.8,
+   "t1": 4948.0,
+   "t2": 4995.6,
+   "risk": 47.599999999999454,
+   "note": "",
+   "close": 4895.5
   },
   {
    "sym": "MCX",
@@ -506,28 +482,16 @@
    "close": 3565.0
   },
   {
-   "sym": "MPHASIS",
-   "setup": "Reclaim 20DMA",
-   "score": 2,
-   "entry": 2538.6,
-   "stop": 2493.4,
-   "t1": 2583.8,
-   "t2": 2629.0,
-   "risk": 45.19999999999982,
-   "note": "",
-   "close": 2532.89990234375
-  },
-  {
-   "sym": "GLENMARK",
+   "sym": "GODREJCP",
    "setup": "20D Breakout",
    "score": 2,
-   "entry": 2739.8,
-   "stop": 2694.5,
-   "t1": 2785.1,
-   "t2": 2830.4,
-   "risk": 45.30000000000018,
-   "note": "",
-   "close": 2719.0
+   "entry": 964.0,
+   "stop": 951.05,
+   "t1": 976.95,
+   "t2": 989.9,
+   "risk": 12.950000000000045,
+   "note": "RSI>80 overbought - avoid chasing; Volume 2.5x avg",
+   "close": 963.0
   },
   {
    "sym": "GREAVESCOT",
@@ -554,18 +518,6 @@
    "close": 1640.0
   },
   {
-   "sym": "ARIS",
-   "setup": "20D Breakout",
-   "score": 2,
-   "entry": 194.69,
-   "stop": 189.95,
-   "t1": 199.43,
-   "t2": 204.17,
-   "risk": 4.740000000000009,
-   "note": "RSI>80 overbought - avoid chasing; Volume 7.3x avg",
-   "close": 190.3000030517578
-  },
-  {
    "sym": "NESTLEIND",
    "setup": "20D Breakout",
    "score": 2,
@@ -576,6 +528,18 @@
    "risk": 16.200000000000045,
    "note": "",
    "close": 1358.5
+  },
+  {
+   "sym": "GODREJPROP",
+   "setup": "Bull Flag",
+   "score": 2,
+   "entry": 1961.2,
+   "stop": 1928.1,
+   "t1": 1994.3,
+   "t2": 2027.4,
+   "risk": 33.100000000000136,
+   "note": "",
+   "close": 1920.0
   },
   {
    "sym": "TECHM",
@@ -614,30 +578,6 @@
    "close": 333.79998779296875
   },
   {
-   "sym": "IDFCFIRSTB",
-   "setup": "20D Breakout",
-   "score": 2,
-   "entry": 88.24,
-   "stop": 86.99,
-   "t1": 89.49,
-   "t2": 90.74,
-   "risk": 1.25,
-   "note": "Volume 1.6x avg",
-   "close": 87.47000122070312
-  },
-  {
-   "sym": "CHOLAFIN",
-   "setup": "Bull Flag",
-   "score": 1,
-   "entry": 1904.5,
-   "stop": 1877.6,
-   "t1": 1931.4,
-   "t2": 1958.3,
-   "risk": 26.90000000000009,
-   "note": "RSI>80 overbought - avoid chasing",
-   "close": 1868.0
-  },
-  {
    "sym": "AUBANK",
    "setup": "20D Breakout, Bull Flag",
    "score": 1,
@@ -650,16 +590,28 @@
    "close": 1006.0499877929688
   },
   {
+   "sym": "ACE",
+   "setup": "20D Breakout, Bull Flag",
+   "score": 1,
+   "entry": 1203.2,
+   "stop": 1181.8,
+   "t1": 1224.6,
+   "t2": 1246.0,
+   "risk": 21.40000000000009,
+   "note": "RSI>80 overbought - avoid chasing",
+   "close": 1190.3499755859375
+  },
+  {
    "sym": "DLF",
    "setup": "20D Breakout",
    "score": 1,
-   "entry": 796.75,
-   "stop": 787.05,
-   "t1": 806.45,
-   "t2": 816.15,
-   "risk": 9.700000000000045,
+   "entry": 798.8,
+   "stop": 788.95,
+   "t1": 808.65,
+   "t2": 818.5,
+   "risk": 9.849999999999909,
    "note": "RSI>80 overbought - avoid chasing",
-   "close": 794.0999755859375
+   "close": 795.0
   },
   {
    "sym": "SBIN",
@@ -674,6 +626,30 @@
    "close": 1138.1500244140625
   },
   {
+   "sym": "J&KBANK",
+   "setup": "20D Breakout",
+   "score": 1,
+   "entry": 157.16,
+   "stop": 154.52,
+   "t1": 159.8,
+   "t2": 162.44,
+   "risk": 2.6399999999999864,
+   "note": "RSI>80 overbought - avoid chasing; Volume 3.0x avg",
+   "close": 155.32000732421875
+  },
+  {
+   "sym": "HEGAM",
+   "setup": "Bull Flag",
+   "score": 1,
+   "entry": 263.0,
+   "stop": 254.6,
+   "t1": 271.4,
+   "t2": 279.8,
+   "risk": 8.400000000000006,
+   "note": "",
+   "close": 258.6600036621094
+  },
+  {
    "sym": "PNB",
    "setup": "Bull Flag",
    "score": 1,
@@ -684,6 +660,18 @@
    "risk": 2.6100000000000136,
    "note": "RSI>80 overbought - avoid chasing",
    "close": 148.61000061035156
+  },
+  {
+   "sym": "FACT",
+   "setup": "Bull Flag",
+   "score": 1,
+   "entry": 760.7,
+   "stop": 744.8,
+   "t1": 776.6,
+   "t2": 792.5,
+   "risk": 15.900000000000091,
+   "note": "Below 50DMA",
+   "close": 743.8499755859375
   },
   {
    "sym": "APLAPOLLO",
@@ -698,16 +686,16 @@
    "close": 1476.0
   },
   {
-   "sym": "MFSL",
-   "setup": "Bull Flag",
+   "sym": "LLOYDSME",
+   "setup": "Oversold",
    "score": 0,
-   "entry": 1455.2,
-   "stop": 1432.2,
-   "t1": 1478.2,
-   "t2": 1501.2,
-   "risk": 23.0,
-   "note": "RSI>80 overbought - avoid chasing",
-   "close": 1431.9000244140625
+   "entry": 1710.6,
+   "stop": 1688.7,
+   "t1": 1732.5,
+   "t2": 1754.4,
+   "risk": 21.899999999999864,
+   "note": "Volume 4.1x avg; Below 50DMA",
+   "close": 1606.0
   },
   {
    "sym": "TATASTEEL",
@@ -720,6 +708,18 @@
    "risk": 3.1399999999999864,
    "note": "Volume 4.3x avg; Below 50DMA",
    "close": 159.3000030517578
+  },
+  {
+   "sym": "KAYNES",
+   "setup": "Oversold",
+   "score": -1,
+   "entry": 2849.2,
+   "stop": 2774.0,
+   "t1": 2924.4,
+   "t2": 2999.6,
+   "risk": 75.19999999999982,
+   "note": "Below 50DMA",
+   "close": 2698.0
   }
  ]
 }
