@@ -3,7 +3,7 @@
  "setups": [
   {
    "sym": "LODHA",
-   "mcap": 124706.5,
+   "mcap": 125156.2,
    "setup": "20D Breakout, Bull Flag",
    "score": 5,
    "entry": 1270.2,
@@ -16,7 +16,7 @@
   },
   {
    "sym": "HCLTECH",
-   "mcap": 387778.2,
+   "mcap": 384882.2,
    "setup": "20D Breakout, Reclaim 20DMA",
    "score": 5,
    "entry": 1470.1,
@@ -29,7 +29,7 @@
   },
   {
    "sym": "PRESTIGE",
-   "mcap": 77100.7,
+   "mcap": 77350.5,
    "setup": "20D Breakout",
    "score": 4,
    "entry": 1842.6,
@@ -42,7 +42,7 @@
   },
   {
    "sym": "BSE",
-   "mcap": 162524.7,
+   "mcap": 160705.3,
    "setup": "20D Breakout",
    "score": 4,
    "entry": 4002.0,
@@ -54,60 +54,47 @@
    "close": 3990.39990234375
   },
   {
-   "sym": "HINDUNILVR",
-   "mcap": 501473.3,
-   "setup": "20D Breakout",
+   "sym": "360ONE",
+   "mcap": 53019.4,
+   "setup": "Bull Flag",
    "score": 4,
-   "entry": 2144.0,
-   "stop": 2120.2,
-   "t1": 2167.8,
-   "t2": 2191.6,
-   "risk": 23.800000000000182,
-   "note": "Volume 3.1x avg",
-   "close": 2141.800048828125
-  },
-  {
-   "sym": "TCS",
-   "mcap": 932019.3,
-   "setup": "20D Breakout",
-   "score": 4,
-   "entry": 2643.0,
-   "stop": 2606.9,
-   "t1": 2679.1,
-   "t2": 2715.2,
-   "risk": 36.09999999999991,
+   "entry": 1212.8,
+   "stop": 1193.3,
+   "t1": 1232.3,
+   "t2": 1251.8,
+   "risk": 19.5,
    "note": "Volume 1.6x avg",
-   "close": 2640.300048828125
+   "close": 1210.0
   },
   {
-   "sym": "CIPLA",
-   "mcap": 116578.2,
-   "setup": "20D Breakout",
-   "score": 4,
-   "entry": 1448.5,
-   "stop": 1435.7,
-   "t1": 1461.3,
-   "t2": 1474.1,
-   "risk": 12.799999999999955,
-   "note": "Volume 1.8x avg",
-   "close": 1433.199951171875
-  },
-  {
-   "sym": "MCX",
-   "mcap": 99438.7,
+   "sym": "TORNTPHARM",
+   "mcap": 191325.0,
    "setup": "20D Breakout",
    "score": 3,
-   "entry": 3868.9,
-   "stop": 3797.1,
-   "t1": 3940.7,
-   "t2": 4012.5,
-   "risk": 71.80000000000018,
-   "note": "Volume 1.9x avg",
-   "close": 3835.0
+   "entry": 5035.5,
+   "stop": 4987.0,
+   "t1": 5084.0,
+   "t2": 5132.5,
+   "risk": 48.5,
+   "note": "Volume 4.8x avg",
+   "close": 5019.10009765625
+  },
+  {
+   "sym": "HEROMOTOCO",
+   "mcap": 114152.3,
+   "setup": "20D Breakout",
+   "score": 3,
+   "entry": 5834.0,
+   "stop": 5764.0,
+   "t1": 5904.0,
+   "t2": 5974.0,
+   "risk": 70.0,
+   "note": "",
+   "close": 5789.0
   },
   {
    "sym": "WOCKPHARMA",
-   "mcap": 36339.3,
+   "mcap": 36511.6,
    "setup": "20D Breakout",
    "score": 3,
    "entry": 2248.4,
@@ -119,21 +106,34 @@
    "close": 2233.699951171875
   },
   {
-   "sym": "LAURUSLABS",
-   "mcap": 136153.3,
+   "sym": "OBEROIRLTY",
+   "mcap": 68757.2,
    "setup": "20D Breakout",
    "score": 3,
-   "entry": 2462.5,
-   "stop": 2420.5,
-   "t1": 2504.5,
-   "t2": 2546.5,
-   "risk": 42.0,
+   "entry": 1922.3,
+   "stop": 1895.6,
+   "t1": 1949.0,
+   "t2": 1975.7,
+   "risk": 26.700000000000045,
+   "note": "Volume 1.6x avg",
+   "close": 1905.199951171875
+  },
+  {
+   "sym": "LAURUSLABS",
+   "mcap": 135564.3,
+   "setup": "20D Breakout",
+   "score": 3,
+   "entry": 2519.6,
+   "stop": 2477.1,
+   "t1": 2562.1,
+   "t2": 2604.6,
+   "risk": 42.5,
    "note": "",
-   "close": 2460.0
+   "close": 2505.0
   },
   {
    "sym": "SUNPHARMA",
-   "mcap": 457937.0,
+   "mcap": 457073.3,
    "setup": "20D Breakout",
    "score": 3,
    "entry": 1933.0,
@@ -146,7 +146,7 @@
   },
   {
    "sym": "TECHM",
-   "mcap": 163101.2,
+   "mcap": 160920.6,
    "setup": "20D Breakout",
    "score": 3,
    "entry": 1859.8,
@@ -159,7 +159,7 @@
   },
   {
    "sym": "INFY",
-   "mcap": 468102.0,
+   "mcap": 467494.4,
    "setup": "Reclaim 20DMA",
    "score": 3,
    "entry": 1186.2,
@@ -171,8 +171,34 @@
    "close": 1183.0
   },
   {
+   "sym": "SBILIFE",
+   "mcap": 185889.6,
+   "setup": "20D Breakout",
+   "score": 3,
+   "entry": 1850.3,
+   "stop": 1827.1,
+   "t1": 1873.5,
+   "t2": 1896.7,
+   "risk": 23.200000000000045,
+   "note": "",
+   "close": 1842.300048828125
+  },
+  {
+   "sym": "CIPLA",
+   "mcap": 116174.3,
+   "setup": "20D Breakout",
+   "score": 3,
+   "entry": 1473.4,
+   "stop": 1459.6,
+   "t1": 1487.2,
+   "t2": 1501.0,
+   "risk": 13.800000000000182,
+   "note": "",
+   "close": 1450.0
+  },
+  {
    "sym": "AXISBANK",
-   "mcap": 432998.6,
+   "mcap": 430693.4,
    "setup": "Bull Flag",
    "score": 3,
    "entry": 1446.5,
@@ -185,7 +211,7 @@
   },
   {
    "sym": "HDFCBANK",
-   "mcap": 1330308.2,
+   "mcap": 1323054.4,
    "setup": "20D Breakout",
    "score": 3,
    "entry": 872.5,
@@ -198,7 +224,7 @@
   },
   {
    "sym": "ICICIBANK",
-   "mcap": 1147887.3,
+   "mcap": 1145085.4,
    "setup": "Bull Flag",
    "score": 3,
    "entry": 1653.7,
@@ -210,8 +236,21 @@
    "close": 1611.0
   },
   {
+   "sym": "GLENMARK",
+   "mcap": 79672.0,
+   "setup": "20D Breakout",
+   "score": 3,
+   "entry": 2756.8,
+   "stop": 2714.6,
+   "t1": 2799.0,
+   "t2": 2841.2,
+   "risk": 42.20000000000027,
+   "note": "",
+   "close": 2740.199951171875
+  },
+  {
    "sym": "INDOMIM",
-   "mcap": 66730.2,
+   "mcap": 66463.2,
    "setup": "20D Breakout",
    "score": 3,
    "entry": 1309.9,
@@ -224,7 +263,7 @@
   },
   {
    "sym": "BAJFINANCE",
-   "mcap": 693065.8,
+   "mcap": 685174.9,
    "setup": "Bull Flag",
    "score": 3,
    "entry": 1126.5,
@@ -236,21 +275,34 @@
    "close": 1097.8499755859375
   },
   {
-   "sym": "LENSKART",
-   "mcap": 124981.6,
-   "setup": "Bull Flag",
+   "sym": "MARICO",
+   "mcap": 119926.0,
+   "setup": "20D Breakout",
    "score": 3,
-   "entry": 739.45,
-   "stop": 726.8,
-   "t1": 752.1,
-   "t2": 764.75,
-   "risk": 12.650000000000091,
+   "entry": 940.05,
+   "stop": 931.7,
+   "t1": 948.4,
+   "t2": 956.75,
+   "risk": 8.349999999999909,
    "note": "",
-   "close": 720.5499877929688
+   "close": 939.0999755859375
+  },
+  {
+   "sym": "UNOMINDA",
+   "mcap": 78477.8,
+   "setup": "20D Breakout, Bull Flag",
+   "score": 3,
+   "entry": 1392.2,
+   "stop": 1367.5,
+   "t1": 1416.9,
+   "t2": 1441.6,
+   "risk": 24.700000000000045,
+   "note": "",
+   "close": 1390.0
   },
   {
    "sym": "WIPRO",
-   "mcap": 190944.9,
+   "mcap": 190272.1,
    "setup": "Reclaim 20DMA",
    "score": 3,
    "entry": 197.6,
@@ -263,7 +315,7 @@
   },
   {
    "sym": "KALYANKJIL",
-   "mcap": 66963.6,
+   "mcap": 68037.6,
    "setup": "Bull Flag",
    "score": 3,
    "entry": 650.65,
@@ -276,7 +328,7 @@
   },
   {
    "sym": "ANGELONE",
-   "mcap": 34765.4,
+   "mcap": 34495.4,
    "setup": "20D Breakout",
    "score": 3,
    "entry": 362.1,
@@ -289,7 +341,7 @@
   },
   {
    "sym": "KARURVYSYA",
-   "mcap": 35969.7,
+   "mcap": 35689.4,
    "setup": "Bull Flag",
    "score": 3,
    "entry": 383.05,
@@ -302,7 +354,7 @@
   },
   {
    "sym": "MEESHO",
-   "mcap": 120008.1,
+   "mcap": 119665.3,
    "setup": "Bull Flag",
    "score": 3,
    "entry": 258.15,
@@ -315,7 +367,7 @@
   },
   {
    "sym": "WELSPUNLIV",
-   "mcap": 26535.6,
+   "mcap": 26885.8,
    "setup": "20D Breakout",
    "score": 3,
    "entry": 284.8,
@@ -327,21 +379,8 @@
    "close": 280.3500061035156
   },
   {
-   "sym": "GROWW",
-   "mcap": 138746.7,
-   "setup": "Bull Flag",
-   "score": 3,
-   "entry": 221.4,
-   "stop": 217.0,
-   "t1": 225.8,
-   "t2": 230.2,
-   "risk": 4.400000000000006,
-   "note": "",
-   "close": 217.47999572753906
-  },
-  {
    "sym": "BANKBARODA",
-   "mcap": 144151.7,
+   "mcap": 142160.7,
    "setup": "Bull Flag",
    "score": 3,
    "entry": 278.15,
@@ -354,7 +393,7 @@
   },
   {
    "sym": "CANBK",
-   "mcap": 119233.7,
+   "mcap": 118916.3,
    "setup": "Bull Flag",
    "score": 3,
    "entry": 135.03,
@@ -367,7 +406,7 @@
   },
   {
    "sym": "GMRAIRPORT",
-   "mcap": 106876.3,
+   "mcap": 105533.0,
    "setup": "Bull Flag",
    "score": 3,
    "entry": 103.61,
@@ -380,7 +419,7 @@
   },
   {
    "sym": "APLAPOLLO",
-   "mcap": 42615.0,
+   "mcap": 41648.8,
    "setup": "Oversold, Oversold Bounce",
    "score": 2,
    "entry": 1508.4,
@@ -392,21 +431,21 @@
    "close": 1481.5
   },
   {
-   "sym": "GLENMARK",
-   "mcap": 80112.3,
+   "sym": "BRIGADE",
+   "mcap": 20134.0,
    "setup": "20D Breakout",
    "score": 2,
-   "entry": 2739.8,
-   "stop": 2694.5,
-   "t1": 2785.1,
-   "t2": 2830.4,
-   "risk": 45.30000000000018,
-   "note": "",
-   "close": 2719.0
+   "entry": 645.15,
+   "stop": 632.8,
+   "t1": 657.5,
+   "t2": 669.85,
+   "risk": 12.350000000000023,
+   "note": "Volume 4.1x avg",
+   "close": 628.5
   },
   {
    "sym": "M&M",
-   "mcap": 417036.7,
+   "mcap": 413302.4,
    "setup": "Bull Flag",
    "score": 2,
    "entry": 3508.2,
@@ -418,21 +457,8 @@
    "close": 3487.5
   },
   {
-   "sym": "RELIANCE",
-   "mcap": 1868834.4,
-   "setup": "20D Breakout",
-   "score": 2,
-   "entry": 1403.2,
-   "stop": 1389.0,
-   "t1": 1417.4,
-   "t2": 1431.6,
-   "risk": 14.200000000000045,
-   "note": "",
-   "close": 1396.199951171875
-  },
-  {
    "sym": "POLICYBZR",
-   "mcap": 54897.6,
+   "mcap": 54906.8,
    "setup": "20D Breakout",
    "score": 2,
    "entry": 1181.0,
@@ -444,21 +470,21 @@
    "close": 1170.0
   },
   {
-   "sym": "GODREJPROP",
-   "mcap": 59561.5,
-   "setup": "Bull Flag",
+   "sym": "ABDL",
+   "mcap": 23396.4,
+   "setup": "20D Breakout, Bull Flag",
    "score": 2,
-   "entry": 1961.2,
-   "stop": 1928.1,
-   "t1": 1994.3,
-   "t2": 2027.4,
-   "risk": 33.100000000000136,
-   "note": "",
-   "close": 1920.0
+   "entry": 825.7,
+   "stop": 810.95,
+   "t1": 840.45,
+   "t2": 855.2,
+   "risk": 14.75,
+   "note": "RSI>80 overbought - avoid chasing",
+   "close": 820.2999877929688
   },
   {
    "sym": "AUBANK",
-   "mcap": 73056.8,
+   "mcap": 73566.4,
    "setup": "Bull Flag",
    "score": 2,
    "entry": 1003.2,
@@ -470,8 +496,21 @@
    "close": 982.0
   },
   {
+   "sym": "CHOLAFIN",
+   "mcap": 154603.1,
+   "setup": "Bull Flag",
+   "score": 2,
+   "entry": 1880.9,
+   "stop": 1853.7,
+   "t1": 1908.1,
+   "t2": 1935.3,
+   "risk": 27.200000000000045,
+   "note": "",
+   "close": 1842.9000244140625
+  },
+  {
    "sym": "INDIANB",
-   "mcap": 125752.5,
+   "mcap": 124776.0,
    "setup": "Bull Flag",
    "score": 2,
    "entry": 942.0,
@@ -483,8 +522,21 @@
    "close": 933.0
   },
   {
+   "sym": "NAUKRI",
+   "mcap": 78460.7,
+   "setup": "20D Breakout",
+   "score": 2,
+   "entry": 1242.9,
+   "stop": 1225.7,
+   "t1": 1260.1,
+   "t2": 1277.3,
+   "risk": 17.200000000000045,
+   "note": "",
+   "close": 1229.0
+  },
+  {
    "sym": "JSWINFRA",
-   "mcap": 82914.4,
+   "mcap": 82681.8,
    "setup": "20D Breakout",
    "score": 2,
    "entry": 368.4,
@@ -496,21 +548,34 @@
    "close": 365.6499938964844
   },
   {
-   "sym": "PFC",
-   "mcap": 108259.8,
-   "setup": "Reclaim 20DMA",
+   "sym": "LICHSGFIN",
+   "mcap": 32519.7,
+   "setup": "Bull Flag",
    "score": 2,
-   "entry": 337.35,
-   "stop": 332.75,
-   "t1": 341.95,
-   "t2": 346.55,
-   "risk": 4.600000000000023,
+   "entry": 610.95,
+   "stop": 601.15,
+   "t1": 620.75,
+   "t2": 630.55,
+   "risk": 9.800000000000068,
    "note": "",
-   "close": 333.79998779296875
+   "close": 596.25
+  },
+  {
+   "sym": "SBIFUNDS",
+   "mcap": 107096.4,
+   "setup": "20D Breakout",
+   "score": 2,
+   "entry": 539.05,
+   "stop": 531.4,
+   "t1": 546.7,
+   "t2": 554.35,
+   "risk": 7.649999999999977,
+   "note": "",
+   "close": 533.9000244140625
   },
   {
    "sym": "RBLBANK",
-   "mcap": 61353.3,
+   "mcap": 60887.3,
    "setup": "Bull Flag",
    "score": 2,
    "entry": 396.4,
@@ -523,7 +588,7 @@
   },
   {
    "sym": "NTPC",
-   "mcap": 311747.8,
+   "mcap": 308644.9,
    "setup": "Reclaim 20DMA",
    "score": 2,
    "entry": 322.85,
@@ -536,7 +601,7 @@
   },
   {
    "sym": "BELRISE",
-   "mcap": 23460.2,
+   "mcap": 23286.1,
    "setup": "Bull Flag",
    "score": 2,
    "entry": 244.05,
@@ -548,8 +613,34 @@
    "close": 241.07000732421875
   },
   {
+   "sym": "GODREJPROP",
+   "mcap": 58558.4,
+   "setup": "20D Breakout",
+   "score": 1,
+   "entry": 2021.2,
+   "stop": 1988.0,
+   "t1": 2054.4,
+   "t2": 2087.6,
+   "risk": 33.200000000000045,
+   "note": "RSI>80 overbought - avoid chasing",
+   "close": 2004.300048828125
+  },
+  {
+   "sym": "BHARATFORG",
+   "mcap": 86543.6,
+   "setup": "Reclaim 20DMA",
+   "score": 1,
+   "entry": 1774.3,
+   "stop": 1748.1,
+   "t1": 1800.5,
+   "t2": 1826.7,
+   "risk": 26.200000000000045,
+   "note": "Below 50DMA",
+   "close": 1744.0
+  },
+  {
    "sym": "DLF",
-   "mcap": 199448.2,
+   "mcap": 197034.8,
    "setup": "20D Breakout",
    "score": 1,
    "entry": 813.2,
@@ -562,7 +653,7 @@
   },
   {
    "sym": "MOTILALOFS",
-   "mcap": 74546.1,
+   "mcap": 73581.3,
    "setup": "Bull Flag",
    "score": 1,
    "entry": 1260.3,
@@ -575,7 +666,7 @@
   },
   {
    "sym": "SBIN",
-   "mcap": 1040844.4,
+   "mcap": 1038952.2,
    "setup": "Bull Flag",
    "score": 1,
    "entry": 1151.3,
@@ -588,7 +679,7 @@
   },
   {
    "sym": "MAXHEALTH",
-   "mcap": 104184.9,
+   "mcap": 103970.8,
    "setup": "Bull Flag",
    "score": 1,
    "entry": 1091.1,
@@ -601,7 +692,7 @@
   },
   {
    "sym": "BHEL",
-   "mcap": 145985.5,
+   "mcap": 146438.2,
    "setup": "Reclaim 20DMA",
    "score": 1,
    "entry": 425.95,
@@ -614,7 +705,7 @@
   },
   {
    "sym": "IRCTC",
-   "mcap": 36716.0,
+   "mcap": 36708.0,
    "setup": "Reclaim 20DMA",
    "score": 1,
    "entry": 455.65,
@@ -626,21 +717,8 @@
    "close": 454.20001220703125
   },
   {
-   "sym": "LICHSGFIN",
-   "mcap": 32849.8,
-   "setup": "Bull Flag",
-   "score": 1,
-   "entry": 620.95,
-   "stop": 610.9,
-   "t1": 631.0,
-   "t2": 641.05,
-   "risk": 10.050000000000068,
-   "note": "RSI>80 overbought - avoid chasing",
-   "close": 598.0
-  },
-  {
    "sym": "BANKINDIA",
-   "mcap": 75428.6,
+   "mcap": 74085.6,
    "setup": "Bull Flag",
    "score": 1,
    "entry": 164.62,
@@ -653,7 +731,7 @@
   },
   {
    "sym": "IDFCFIRSTB",
-   "mcap": 75181.7,
+   "mcap": 74853.8,
    "setup": "Bull Flag",
    "score": 1,
    "entry": 87.59,
@@ -665,8 +743,21 @@
    "close": 86.70999908447266
   },
   {
+   "sym": "LLOYDSME",
+   "mcap": 87595.0,
+   "setup": "Oversold",
+   "score": 0,
+   "entry": 1607.7,
+   "stop": 1584.6,
+   "t1": 1630.8,
+   "t2": 1653.9,
+   "risk": 23.100000000000136,
+   "note": "Volume 3.5x avg; Below 50DMA",
+   "close": 1542.199951171875
+  },
+  {
    "sym": "TATASTEEL",
-   "mcap": 206433.9,
+   "mcap": 204463.4,
    "setup": "Oversold Bounce",
    "score": 0,
    "entry": 163.71,
@@ -679,7 +770,7 @@
   },
   {
    "sym": "MANAPPURAM",
-   "mcap": 25831.7,
+   "mcap": 26249.7,
    "setup": "Oversold Bounce",
    "score": 0,
    "entry": 275.5,
