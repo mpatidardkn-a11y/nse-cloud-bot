@@ -33,6 +33,63 @@ NEWS_FEEDS = ["https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.
               "https://news.google.com/rss/search?q=Sensex%20OR%20Nifty%20OR%20%22stock%20market%22%20India%20when:1d&hl=en-IN&gl=IN&ceid=IN:en"]
 
 
+MIN_MCAP_CR = float(os.environ.get("MIN_MCAP_CR", "20000"))   # only stocks with market cap above Rs 20,000 Cr
+
+
+def yahoo_session():
+    import http.cookiejar
+    op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+    op.addheaders = [("User-Agent", "Mozilla/5.0")]
+    try:
+        op.open("https://fc.yahoo.com", timeout=15)
+    except Exception:
+        pass  # sets the cookie even on 404
+    crumb = op.open("https://query1.finance.yahoo.com/v1/test/getcrumb", timeout=15).read().decode().strip()
+    return op, crumb
+
+
+def build_large_universe():
+    """Market cap for every NSE EQ stock -> trader/mcap.json + trader/universe_large.txt (>= MIN_MCAP_CR)."""
+    lines = [l.strip() for l in open("trader/universe.txt") if "|" in l]
+    names = {l.split("|")[0]: l for l in lines}
+    syms = list(names)
+    mcap = {}
+    try:
+        op, crumb = yahoo_session()
+        for i in range(0, len(syms), 50):
+            batch = syms[i:i + 50]
+            url = ("https://query1.finance.yahoo.com/v7/finance/quote?fields=marketCap&crumb=%s&symbols=%s"
+                   % (urllib.parse.quote(crumb), ",".join(urllib.parse.quote(b + ".NS") for b in batch)))
+            for _ in range(3):
+                try:
+                    for q in json.load(op.open(url, timeout=20))["quoteResponse"]["result"]:
+                        if q.get("marketCap"):
+                            mcap[q["symbol"][:-3]] = round(q["marketCap"] / 1e7, 1)   # rupees -> crore
+                    break
+                except Exception:
+                    time.sleep(2)
+            time.sleep(0.3)
+    except Exception as e:
+        log("market cap fetch failed:", e)
+    if len(mcap) < 500:
+        log("market cap: only %d values, keeping the previous list" % len(mcap)); return
+    big = sorted((s for s, v in mcap.items() if v >= MIN_MCAP_CR), key=lambda s: -mcap[s])
+    json.dump({"date": now_ist().date().isoformat(), "min_cr": MIN_MCAP_CR, "mcap_cr": mcap}, open("trader/mcap.json", "w"))
+    open("trader/universe_large.txt", "w").write("\n".join(names[s] for s in big) + "\n")
+    log("market cap: %d of %d stocks are above Rs %s Cr" % (len(big), len(mcap), format(MIN_MCAP_CR, ",.0f")))
+
+
+def load_mcap():
+    try:
+        return json.load(open("trader/mcap.json"))["mcap_cr"]
+    except Exception:
+        return {}
+
+
+def big_enough(sym, mcap):
+    return (not mcap) or mcap.get(sym, 0) >= MIN_MCAP_CR
+
+
 def log(*a):
     print(time.strftime("%Y-%m-%d %H:%M:%S ") + " ".join(str(x) for x in a), flush=True)
 
@@ -133,9 +190,13 @@ def cmd_morning(args):
     if os.environ.get("GITHUB_EVENT_NAME") == "schedule" and now.time() > datetime.time(9, 20) and not args.get("now"):
         log("morning: scheduled run started after 9:20 IST - building today's setup list, email skipped")
         args["no_send"] = True
-    r = subprocess.run([PY, "scan.py", "daily", "--out", "trader/daily.json", "--quiet"], capture_output=True, text=True)
+    build_large_universe()
+    uni = "trader/universe_large.txt" if os.path.exists("trader/universe_large.txt") else "trader/universe.txt"
+    r = subprocess.run([PY, "scan.py", "daily", "--universe", uni, "--out", "trader/daily.json", "--quiet"], capture_output=True, text=True)
     log("daily scan exit", r.returncode, (r.stdout + r.stderr).strip()[-300:])
     daily = json.load(open("trader/daily.json"))
+    mcap = load_mcap()
+    daily["hits"] = [h for h in daily["hits"] if big_enough(h["symbol"], mcap)]
     hits = daily["hits"]
 
     ctx = {}
@@ -163,7 +224,7 @@ def cmd_morning(args):
         if s["rsi"] > 80: note.append("RSI>80 overbought - avoid chasing")
         if s["vr"] >= 1.5: note.append("Volume %.1fx avg" % s["vr"])
         if s["close"] < s["ma50"]: note.append("Below 50DMA")
-        setups.append(dict(sym=h["symbol"], setup=", ".join(LABEL[x] for x in h["setups"]), score=score, s=s,
+        setups.append(dict(sym=h["symbol"], mcap=mcap.get(h["symbol"], 0), setup=", ".join(LABEL[x] for x in h["setups"]), score=score, s=s,
                            entry=entry, stop=stop, t1=rup(entry + risk, t), t2=rup(entry + 2 * risk, t), risk=risk,
                            note="; ".join(note)))
     setups.sort(key=lambda x: (-x["score"], -x["s"]["close"] * x["s"]["vr"]))
@@ -202,7 +263,7 @@ def market_view(ctx, daily):
     for h in daily["hits"]:
         for s in h["setups"]:
             cnt[s] = cnt.get(s, 0) + 1
-    v.append("Scanner: %s liquid NSE stocks scanned, %d matched a setup (%s)." % (daily.get("scanned"), len(daily["hits"]),
+    v.append("Scanner: only stocks with market cap above Rs %s Cr. %s liquid stocks scanned, %d matched a setup (%s)." % (format(MIN_MCAP_CR, ",.0f"), daily.get("scanned"), len(daily["hits"]),
              ", ".join("%d %s" % (n, LABEL[k]) for k, n in sorted(cnt.items(), key=lambda x: -x[1]))))
     v.append("Plan: wait for the 9:15-9:30 opening range, enter only on a 5-min close above the trigger, stop in at once, no entries after 15:00, square off by 15:15.")
     return v
@@ -214,7 +275,7 @@ def morning_pdf(now, ctx, view, news, setups, daily):
     pdf.set_font("Helvetica", "B", 16)
     pdf.cell(0, 9, "NSE Pre-Market Analysis - %s" % now.strftime("%A %d %b %Y"), new_x="LMARGIN", new_y="NEXT")
     pdf.set_font("Helvetica", "", 9)
-    pdf.cell(0, 5, "Generated %s IST from previous-session closes (Yahoo Finance, free, delayed)." % now.strftime("%H:%M"), new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(0, 5, "Generated %s IST from previous-session closes (Yahoo Finance, free, delayed). Universe: market cap above Rs %s Cr." % (now.strftime("%H:%M"), format(MIN_MCAP_CR, ",.0f")), new_x="LMARGIN", new_y="NEXT")
     pdf.ln(2)
     cols = [("Index", 34), ("Close", 26), ("Day %", 18), ("Week %", 18), ("RSI", 14), ("Pivot", 24), ("R1", 24), ("R2", 24), ("S1", 24), ("S2", 24)]
     hdr(pdf, cols)
@@ -293,11 +354,11 @@ def morning_xlsx(now, ctx, view, news, setups, by_turn):
           [[n, round(s["close"], 2), round(s["chg1"], 2), round(s["chg5"], 2), round(s["rsi"], 1), round(s["ma20"], 2), round(s["ma50"], 2)]
            + [round(s[k], 2) for k in ("pivot", "r1", "r2", "s1", "s2")] for n, s in ctx.items()], [16] + [11] * 11)
     ws.append([]); [ws.append([v]) for v in view]
-    sheet(wb.create_sheet("Trade Setups"), ["Rank", "Symbol", "Setup", "Score", "Close", "RSI", "Vol x avg", "ENTRY (buy above)",
+    sheet(wb.create_sheet("Trade Setups"), ["Rank", "Symbol", "Mcap (Rs Cr)", "Setup", "Score", "Close", "RSI", "Vol x avg", "ENTRY (buy above)",
           "STOP LOSS", "TARGET 1", "TARGET 2", "Risk/share", "Qty for Rs1,000 risk", "Notes"],
-          [[i, x["sym"], x["setup"], x["score"], x["s"]["close"], round(x["s"]["rsi"], 1), round(x["s"]["vr"], 1), x["entry"], x["stop"],
+          [[i, x["sym"], x["mcap"], x["setup"], x["score"], x["s"]["close"], round(x["s"]["rsi"], 1), round(x["s"]["vr"], 1), x["entry"], x["stop"],
             x["t1"], x["t2"], round(x["risk"], 2), int(1000 // x["risk"]), x["note"]] for i, x in enumerate(setups, 1)],
-          [6, 13, 28, 7, 11, 7, 9, 14, 11, 11, 11, 10, 12, 40])
+          [6, 13, 13, 28, 7, 11, 7, 9, 14, 11, 11, 11, 10, 12, 40])
     sheet(wb.create_sheet("News"), ["Headline", "Source", "Date", "Link"], [[n["title"], n["src"], n["date"], n["link"]] for n in news], [90, 20, 24, 60])
     sheet(wb.create_sheet("All Scanner Hits"), ["Symbol", "Setups", "Close", "RSI", "Volume"],
           [[h["symbol"], ", ".join(LABEL[x] for x in h["setups"]), h["price"], h["rsi"], h["volume"]] for h in by_turn], [14, 40, 11, 8, 14])
@@ -342,9 +403,12 @@ def cmd_run(args):
         if late > 10:
             log("run: GitHub started this scheduled run %d min late - skipped to avoid a stale report" % late); return
     daily = json.load(open("trader/daily.json"))
+    mcap = load_mcap()
+    daily["hits"] = [h for h in daily["hits"] if big_enough(h["symbol"], mcap)]
+    json.dump(daily, open("trader/daily_large.json", "w"))
     dsetups = {h["symbol"]: h for h in daily["hits"]}
     plan = json.load(open("trader/plan.json")) if os.path.exists("trader/plan.json") else {"setups": []}
-    cmd = [PY, "scan.py", "orb", "--watchlist", "trader/daily.json", "--no-write", "--json", "--quiet", "--max-confirm", "0"]
+    cmd = [PY, "scan.py", "orb", "--watchlist", "trader/daily_large.json", "--no-write", "--json", "--quiet", "--max-confirm", "0"]
     if args.get("now"):
         cmd += ["--now", args["now"]]
     r = subprocess.run(cmd, capture_output=True, text=True)
@@ -375,6 +439,8 @@ def cmd_run(args):
     # top up from the morning plan (stocks still waiting for their trigger)
     have = {c["sym"] for c in cands}
     for p in plan["setups"]:
+        if not big_enough(p["sym"], mcap):
+            continue
         if len(cands) >= 10:
             break
         if p["sym"] in have:
@@ -411,7 +477,7 @@ def intraday_pdf(now, top, idx, orb):
     pdf.cell(0, 9, "NSE Top 10 Intraday Setups - %s IST" % now.strftime("%d %b %Y, %H:%M"), new_x="LMARGIN", new_y="NEXT")
     pdf.set_font("Helvetica", "", 10)
     pdf.cell(0, 6, "  |  ".join("%s %s (%+.2f%%)" % (n, format(p, ",.2f"), c) for n, p, c in idx) or "Index data unavailable", new_x="LMARGIN", new_y="NEXT")
-    pdf.cell(0, 6, "Scanned %s charts from today's setup list; %d opening-range breakouts." % (orb.get("scanned", 0), len(orb.get("hits", []))),
+    pdf.cell(0, 6, "Scanned %s charts from today's setup list (market cap above Rs 20,000 Cr); %d opening-range breakouts." % (orb.get("scanned", 0), len(orb.get("hits", []))),
              new_x="LMARGIN", new_y="NEXT")
     pdf.ln(2)
     setup_table(pdf, top, live=True)
@@ -473,7 +539,7 @@ def sleep_until(t):
 
 def git_save():
     cmds = [["git", "config", "user.name", "nse-bot"], ["git", "config", "user.email", "actions@users.noreply.github.com"],
-            ["git", "add", "trader/daily.json", "trader/plan.json"]]
+            ["git", "add", "trader/daily.json", "trader/plan.json", "trader/mcap.json", "trader/universe_large.txt"]]
     for c in cmds:
         subprocess.run(c, capture_output=True)
     if subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode == 0:

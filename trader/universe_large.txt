@@ -1,0 +1,360 @@
+RELIANCE|Reliance Industries Limited
+HDFCBANK|HDFC Bank Limited
+BHARTIARTL|Bharti Airtel Limited
+JPL|Jio Platforms Limited
+ICICIBANK|ICICI Bank Limited
+SBIN|State Bank of India
+TCS|Tata Consultancy Services Limited
+BAJFINANCE|Bajaj Finance Limited
+LT|Larsen & Toubro Limited
+HINDUNILVR|Hindustan Unilever Limited
+KOTAKBANK|Kotak Mahindra Bank Limited
+INFY|Infosys Limited
+SUNPHARMA|Sun Pharmaceutical Industries Limited
+ADANIPORTS|Adani Ports and Special Economic Zone Limited
+MARUTI|Maruti Suzuki India Limited
+AXISBANK|Axis Bank Limited
+M&M|Mahindra & Mahindra Limited
+TITAN|Titan Company Limited
+ADANIPOWER|Adani Power Limited
+HCLTECH|HCL Technologies Limited
+ITC|ITC Limited
+ULTRACEMCO|UltraTech Cement Limited
+ADANIENT|Adani Enterprises Limited
+HAL|Hindustan Aeronautics Limited
+ETERNAL|ETERNAL LIMITED
+JSWSTEEL|JSW Steel Limited
+NTPC|NTPC Limited
+DIVISLAB|Divi's Laboratories Limited
+BEL|Bharat Electronics Limited
+BAJAJFINSV|Bajaj Finserv Limited
+BAJAJ-AUTO|Bajaj Auto Limited
+ONGC|Oil & Natural Gas Corporation Limited
+LICI|Life Insurance Corporation Of India
+NESTLEIND|Nestle India Limited
+POWERGRID|Power Grid Corporation of India Limited
+ASIANPAINT|Asian Paints Limited
+COALINDIA|Coal India Limited
+HINDZINC|Hindustan Zinc Limited
+DMART|Avenue Supermarts Limited
+EICHERMOT|Eicher Motors Limited
+ADANIGREEN|Adani Green Energy Limited
+INDIGO|InterGlobe Aviation Limited
+SHRIRAMFIN|Shriram Finance Limited
+TVSMOTOR|TVS Motor Company Limited
+GRASIM|Grasim Industries Limited
+TATASTEEL|Tata Steel Limited
+IOC|Indian Oil Corporation Limited
+HINDALCO|Hindalco Industries Limited
+DLF|DLF Limited
+TORNTPHARM|Torrent Pharmaceuticals Limited
+WIPRO|Wipro Limited
+SBILIFE|SBI Life Insurance Company Limited
+SOLARINDS|Solar Industries India Limited
+TRENT|Trent Limited
+MOTHERSON|Samvardhana Motherson International Limited
+PNB|Punjab National Bank
+ADANIENSOL|Adani Energy Solutions Limited
+HYUNDAI|Hyundai Motor India Limited
+TECHM|Tech Mahindra Limited
+PIDILITIND|Pidilite Industries Limited
+BSE|BSE Limited
+UNIONBANK|Union Bank of India
+TMCV|Tata Motors Limited
+CHOLAFIN|Cholamandalam Investment and Finance Company Limited
+JIOFIN|Jio Financial Services Limited
+ABB|ABB India Limited
+ICICIAMC|ICICI Prudential Asset Management Company Limited
+BHEL|Bharat Heavy Electricals Limited
+BOSCHLTD|Bosch Limited
+BANKBARODA|Bank of Baroda
+TATACAP|Tata Capital Limited
+VBL|Varun Beverages Limited
+VAML|Vedanta Aluminium Metal Limited
+GROWW|Billionbrains Garage Ventures Limited
+POWERINDIA|Hitachi Energy India Limited
+LAURUSLABS|Laurus Labs Limited
+BPCL|Bharat Petroleum Corporation Limited
+APOLLOHOSP|Apollo Hospitals Enterprise Limited
+BAJAJHLDNG|Bajaj Holdings & Investment Limited
+LTM|LTM Limited
+SIEMENS|Siemens Limited
+HDFCLIFE|HDFC Life Insurance Company Limited
+INDHOTEL|The Indian Hotels Company Limited
+IDEA|Vodafone Idea Limited
+INDIANB|Indian Bank
+LENSKART|Lenskart Solutions Limited
+LODHA|Lodha Developers Limited
+CGPOWER|CG Power and Industrial Solutions Limited
+BRITANNIA|Britannia Industries Limited
+GAIL|GAIL (India) Limited
+LGEINDIA|LG Electronics India Limited
+MARICO|Marico Limited
+MEESHO|Meesho Limited
+CANBK|Canara Bank
+CUMMINSIND|Cummins India Limited
+CIPLA|Cipla Limited
+HEROMOTOCO|Hero MotoCorp Limited
+HDFCAMC|HDFC Asset Management Company Limited
+ZYDUSLIFE|Zydus Lifesciences Limited
+JINDALSTEL|JINDAL STEEL LIMITED
+DRREDDY|Dr. Reddy's Laboratories Limited
+TATACONSUM|TATA CONSUMER PRODUCTS LIMITED
+PAYTM|One 97 Communications Limited
+POLYCAB|Polycab India Limited
+ABCAPITAL|Aditya Birla Capital Limited
+MANKIND|Mankind Pharma Limited
+ENRIN|Siemens Energy India Limited
+PFC|Power Finance Corporation Limited
+SBIFUNDS|SBI Funds Management Limited
+GVT&D|GE Vernova T&D India Limited
+IRFC|Indian Railway Finance Corporation Limited
+GMRAIRPORT|GMR AIRPORTS LIMITED
+UNITDSPR|United Spirits Limited
+MUTHOOTFIN|Muthoot Finance Limited
+MAXHEALTH|Max Healthcare Institute Limited
+AUROPHARMA|Aurobindo Pharma Limited
+TATAPOWER|Tata Power Company Limited
+PERSISTENT|Persistent Systems Limited
+NYKAA|FSN E-Commerce Ventures Limited
+INDUSTOWER|Indus Towers Limited
+MCX|Multi Commodity Exchange of India Limited
+AMBUJACEM|Ambuja Cements Limited
+TMPV|Tata Motors Passenger Vehicles Limited
+VEDL|Vedanta Limited
+GODREJCP|Godrej Consumer Products Limited
+LUPIN|Lupin Limited
+MANIPALHOS|Manipal Health Enterprises Limited
+COFORGE|Coforge Limited
+SHREECEM|SHREE CEMENT LIMITED
+ASHOKLEY|Ashok Leyland Limited
+JSWENERGY|JSW Energy Limited
+FEDERALBNK|The Federal Bank Limited
+LLOYDSME|Lloyds Metals And Energy Limited
+ICICIGI|ICICI Lombard General Insurance Company Limited
+BHARATFORG|Bharat Forge Limited
+IDBI|IDBI Bank Limited
+JSWINFRA|JSW Infrastructure Limited
+HINDPETRO|Hindustan Petroleum Corporation Limited
+OFSS|Oracle Financial Services Software Limited
+PHOENIXLTD|The Phoenix Mills Limited
+DIXON|Dixon Technologies (India) Limited
+GLENMARK|Glenmark Pharmaceuticals Limited
+UNOMINDA|UNO Minda Limited
+NAUKRI|Info Edge (India) Limited
+RECLTD|REC Limited
+BHARTIHEXA|Bharti Hexacom Limited
+PRESTIGE|Prestige Estates Projects Limited
+MAZDOCK|Mazagon Dock Shipbuilders Limited
+NHPC|NHPC Limited
+SRF|SRF Limited
+ATHERENERG|Ather Energy Limited
+BANKINDIA|Bank of India
+INDUSINDBK|IndusInd Bank Limited
+IDFCFIRSTB|IDFC First Bank Limited
+MOTILALOFS|Motilal Oswal Financial Services Limited
+MAHABANK|Bank of Maharashtra
+DABUR|Dabur India Limited
+AUBANK|AU Small Finance Bank Limited
+HAVELLS|Havells India Limited
+OBEROIRLTY|Oberoi Realty Limited
+OIL|Oil India Limited
+NTPCGREEN|NTPC Green Energy Limited
+LTF|L&T Finance Limited
+WAAREEENER|Waaree Energies Limited
+ICICILIFE|ICICI Life Insurance Limited
+SAIL|Steel Authority of India Limited
+NAM-INDIA|Nippon Life India Asset Management Limited
+KALYANKJIL|Kalyan Jewellers India Limited
+BAJAJHFL|Bajaj Housing Finance Limited
+INDOMIM|INDO-MIM Limited
+ASTERDM|Aster DM Quality Care Limited
+FORTIS|Fortis Healthcare Limited
+RADICO|Radico Khaitan Limited
+RBLBANK|RBL Bank Limited
+ALKEM|Alkem Laboratories Limited
+WELCORP|Welspun Corp Limited
+ATGL|Adani Total Gas Limited
+APARINDS|Apar Industries Limited
+IOB|Indian Overseas Bank
+LINDEINDIA|Linde India Limited
+NMDC|NMDC Limited
+GODREJPROP|Godrej Properties Limited
+BIOCON|Biocon Limited
+JSL|Jindal Stainless Limited
+GICRE|General Insurance Corporation of India
+ABBOTINDIA|Abbott India Limited
+TORNTPOWER|Torrent Power Limited
+SCHAEFFLER|Schaeffler India Limited
+COROMANDEL|Coromandel International Limited
+YESBANK|Yes Bank Limited
+SONACOMS|Sona BLW Precision Forgings Limited
+GLAND|Gland Pharma Limited
+ANTHEM|Anthem Biosciences Limited
+NATIONALUM|National Aluminium Company Limited
+SBICARD|SBI Cards and Payment Services Limited
+POLICYBZR|PB Fintech Limited
+MRF|MRF Limited
+BERGEPAINT|Berger Paints (I) Limited
+NAVINFLUOR|Navin Fluorine International Limited
+360ONE|360 ONE WAM LIMITED
+CUPID|Cupid Limited
+FLUOROCHEM|Gujarat Fluorochemicals Limited
+CPPLUS|Aditya Infotech Limited
+FACT|Fertilizers and Chemicals Travancore Limited
+SUZLON|Suzlon Energy Limited
+MFSL|Max Financial Services Limited
+PETRONET|Petronet LNG Limited
+COLPAL|Colgate Palmolive (India) Limited
+TATACOMM|Tata Communications Limited
+SWIGGY|Swiggy Limited
+UPL|UPL Limited
+AIIL|Authum Investment & Infrastructure Limited
+MPHASIS|MphasiS Limited
+AEGISLOG|Aegis Logistics Limited
+SUNDARMFIN|Sundaram Finance Limited
+GLAXO|GlaxoSmithKline Pharmaceuticals Limited
+PIRAMALFIN|Piramal Finance Limited
+IPCALAB|IPCA Laboratories Limited
+HDBFS|HDB Financial Services Limited
+BALKRISIND|Balkrishna Industries Limited
+LTTS|L&T Technology Services Limited
+VMM|Vishal Mega Mart Limited
+PATANJALI|Patanjali Foods Limited
+EMCURE|Emcure Pharmaceuticals Limited
+POONAWALLA|Poonawalla Fincorp Limited
+TIINDIA|Tube Investments of India Limited
+APLAPOLLO|APL Apollo Tubes Limited
+AJANTPHARM|Ajanta Pharma Limited
+JKCEMENT|JK Cement Limited
+KPRMILL|K.P.R. Mill Limited
+SUPREMEIND|Supreme Industries Limited
+HINDCOPPER|Hindustan Copper Limited
+ANANDRATHI|Anand Rathi Wealth Limited
+MEDANTA|Global Health Limited
+PTCIL|PTC Industries Limited
+BDL|Bharat Dynamics Limited
+NH|Narayana Hrudayalaya Ltd.
+RVNL|Rail Vikas Nigam Limited
+M&MFIN|Mahindra & Mahindra Financial Services Limited
+VOLTAS|Voltas Limited
+PWL|Physicswallah Limited
+ITCHOTELS|ITC Hotels Limited
+SAILIFE|Sai Life Sciences Limited
+ENDURANCE|Endurance Technologies Limited
+IRCTC|Indian Railway Catering And Tourism Corporation Limited
+WOCKPHARMA|Wockhardt Limited
+SHYAMMETL|Shyam Metalics and Energy Limited
+PREMIERENE|Premier Energies Limited
+KEI|KEI Industries Limited
+KARURVYSYA|Karur Vysya Bank Limited
+BLUESTARCO|Blue Star Limited
+IREDA|Indian Renewable Energy Development Agency Limited
+GODREJIND|Godrej Industries Limited
+DELHIVERY|Delhivery Limited
+ANGELONE|Angel One Limited
+PAGEIND|Page Industries Limited
+NUVAMA|Nuvama Wealth Management Limited
+ASTRAL|Astral Limited
+STARHEALTH|Star Health and Allied Insurance Company Limited
+UBL|United Breweries Limited
+NLCINDIA|NLC India Limited
+ACUTAAS|Acutaas Chemicals Limited
+LALPATHLAB|Dr. Lal Path Labs Ltd.
+EXIDEIND|Exide Industries Limited
+DHOOTTRANS|Dhoot Transmission Limited
+LICHSGFIN|LIC Housing Finance Limited
+KIMS|Krishna Institute of Medical Sciences Limited
+CONCOR|Container Corporation of India Limited
+AIAENG|AIA Engineering Limited
+3MINDIA|3M India Limited
+ZETWERK|Zetwerk Manufacturing Businesses Limited
+CRAFTSMAN|Craftsman Automation Limited
+HUDCO|Housing & Urban Development Corporation Limited
+RUBICON|Rubicon Research Limited
+THERMAX|Thermax Limited
+HEXT|Hexaware Technologies Limited
+UCOBANK|UCO Bank
+PPLPHARMA|Piramal Pharma Limited
+AEGISVOPAK|Aegis Vopak Terminals Limited
+PNBHOUSING|PNB Housing Finance Limited
+ACMESOLAR|Acme Solar Holdings Limited
+CDSL|Central Depository Services (India) Limited
+ASAHIINDIA|Asahi India Glass Limited
+CENTRALBK|Central Bank of India
+COCHINSHIP|Cochin Shipyard Limited
+SANSERA|Sansera Engineering Limited
+TATAINVEST|Tata Investment Corporation Limited
+SYRMA|Syrma SGS Technology Limited
+GABRIEL|Gabriel India Limited
+MRPL|Mangalore Refinery and Petrochemicals Limited
+CRISIL|Crisil Limited
+TATATECH|Tata Technologies Limited
+ABSLAMC|Aditya Birla Sun Life AMC Limited
+GODFRYPHLP|Godfrey Phillips India Limited
+HSCL|Himadri Speciality Chemical Limited
+URBANCO|Urban Company Limited
+DALBHARAT|Dalmia Bharat Limited
+ESCORTS|Escorts Kubota Limited
+JUBLFOOD|Jubilant Foodworks Limited
+MSUMI|Motherson Sumi Wiring India Limited
+NEULANDLAB|Neuland Laboratories Limited
+BANDHANBNK|Bandhan Bank Limited
+TVSHLTD|TVS Holdings Limited
+APOLLOTYRE|Apollo Tyres Limited
+FORCEMOT|FORCE MOTORS LTD
+IKS|Inventurus Knowledge Solutions Limited
+WELSPUNLIV|Welspun Living Limited
+CEMPRO|Cemindia Projects Limited
+CHOLAHLDNG|Cholamandalam Financial Holdings Limited
+REDINGTON|Redington Limited
+MANAPPURAM|Manappuram Finance Limited
+KIRLOSENG|Kirloskar Oil Engines Limited
+HONAUT|Honeywell Automation India Limited
+IIFL|IIFL Finance Limited
+SUNTV|Sun TV Network Limited
+ZFCVINDIA|ZF Commercial Vehicle Control Systems India Limited
+NETWEB|Netweb Technologies India Limited
+ITI|ITI Limited
+SCHNEIDER|Schneider Electric Infrastructure Limited
+NIACL|The New India Assurance Company Limited
+GRSE|Garden Reach Shipbuilders & Engineers Limited
+PIIND|PI Industries Limited
+TATAELXSI|Tata Elxsi Limited
+DATAPATTNS|Data Patterns (India) Limited
+JYOTICNC|Jyoti CNC Automation Limited
+HATSUN|Hatsun Agro Product Limited
+AMBER|Amber Enterprises India Limited
+GILLETTE|Gillette India Limited
+AFFLE|Affle 3i Limited
+ACC|ACC Limited
+BELRISE|Belrise Industries Limited
+AETHER|Aether Industries Limited
+TIMKEN|Timken India Limited
+PGHH|Procter & Gamble Hygiene and Health Care Limited
+GODIGIT|Go Digit General Insurance Limited
+ABDL|Allied Blenders and Distillers Limited
+CUB|City Union Bank Limited
+THELEELA|Leela Palaces Hotels & Resorts Limited
+GRANULES|Granules India Limited
+GUJENERGY|GUJARAT ENERGY LIMITED
+KPIL|Kalpataru Projects International Limited
+METROBRAND|Metro Brands Limited
+CGCL|Capri Global Capital Limited
+SAGILITY|SAGILITY LIMITED
+SJVN|SJVN Limited
+AWL|AWL Agri Business Limited
+DIACABS|Diamond Power Infrastructure Limited
+SUNDRMFAST|Sundram Fasteners Limited
+HBLENGINE|HBL Engineering Limited
+DEEPAKNTR|Deepak Nitrite Limited
+EIHOTEL|EIH Limited
+IRB|IRB Infrastructure Developers Limited
+RRKABEL|R R Kabel Limited
+GESHIP|The Great Eastern Shipping Company Limited
+IGL|Indraprastha Gas Limited
+NBCC|NBCC (India) Limited
+GRINDWELL|Grindwell Norton Limited
+BRIGADE|Brigade Enterprises Limited
+CHENNPETRO|Chennai Petroleum Corporation Limited
+APLLTD|Alembic Pharmaceuticals Limited

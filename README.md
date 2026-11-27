@@ -15,4 +15,6 @@ so GitHub's late scheduling doesn't delay emails (each report lands ~3 min after
 NSE holidays for 2026 are built in; for 2027 add `trader/nse_holidays.json`
 (`{"years": [2027], "holidays": {"2027-01-26": "Republic Day", ...}}`).
 
+Only stocks with market capitalisation above Rs 20,000 Cr are analysed (set `MIN_MCAP_CR` to change).
+
 Educational technical scan on free, delayed data. Not investment advice.
